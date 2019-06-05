@@ -1,3 +1,12 @@
+glib2.0 (2.56.4-0ubuntu0.18.04.3) bionic-security; urgency=medium
+
+  * SECURITY UPDATE: Less restrictive permissions during copying
+    - debian/patches/CVE-2019-12450.patch: limit access to file when
+      copying in file_copy_fallback in file gio/gfile.c.
+    - CVE-2019-12450
+
+ -- Leonidas S. Barbosa <leo.barbosa@canonical.com>  Wed, 05 Jun 2019 13:47:02 -0300
+
 glib2.0 (2.56.4-0ubuntu0.18.04.2) bionic; urgency=medium
 
   * Backport upstream patches to fix GVariant alignment tests

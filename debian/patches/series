@@ -19,3 +19,4 @@ exp_git_default_per_desktop1.patch
 exp_git_default_per_desktop2.patch
 exp_git_default_per_desktop3.patch
 exp_git_default_per_desktop4.patch
+CVE-2019-12450.patch
