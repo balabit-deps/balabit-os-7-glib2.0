@@ -1,3 +1,27 @@
+glib2.0 (2.56.4-0ubuntu0.18.04.6) bionic-security; urgency=medium
+
+  * No-change rebuild for -security
+
+ -- Alex Murray <alex.murray@canonical.com>  Tue, 24 Mar 2020 11:27:40 +1030
+
+glib2.0 (2.56.4-0ubuntu0.18.04.5) bionic; urgency=medium
+
+  [ Gunnar Hjalmarsson ]
+  * d/p/gcredentialsprivate-Document-the-various-private-macros.patch,
+    d/p/credentials-Invalid-Linux-struct-ucred-means-no-informati.patch,
+    d/p/GDBus-prefer-getsockopt-style-credentials-passing-APIs.patch:
+    - Ensure libdbus clients can authenticate with a GDBusServer like
+      the one in ibus. The patches cherry picked from 2.62.2-2 in focal
+      in order to allow the ibus fix of CVE-2019-14822 to be re-enabled
+      without breaking ibus for Qt applications (LP: #1844853).
+
+  [ Iain Lane ]
+  * d/p/Add-a-test-for-GDBusServer-authentication.patch: Additionally backport
+    this commit to add a test for the above fixes.
+    + BD on libdbus-1-dev so that the above test gets run properly.
+
+ -- Gunnar Hjalmarsson <gunnarhj@ubuntu.com>  Thu, 31 Oct 2019 00:16:00 +0100
+
 glib2.0 (2.56.4-0ubuntu0.18.04.4) bionic-security; urgency=medium
 
   * SECURITY UPDATE: Not properly restrict directory and file permissions
