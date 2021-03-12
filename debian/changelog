@@ -1,3 +1,22 @@
+glib2.0 (2.56.4-0ubuntu0.18.04.8) bionic-security; urgency=medium
+
+  * SECURITY UPDATE: incorrect g_file_replace() symlink handling
+    - debian/patches/CVE-2021-28153-pre1.patch: allow g_test_bug() to be
+      used without g_test_bug_base() in /glib/gtestutils.c.
+    - debian/patches/CVE-2021-28153-1.patch: fix a typo in a comment in
+      gio/glocalfileoutputstream.c.
+    - debian/patches/CVE-2021-28153-2.patch: stop using g_test_bug_base()
+      in file tests in gio/tests/file.c.
+    - debian/patches/CVE-2021-28153-3.patch: factor out a flag check in
+      gio/glocalfileoutputstream.c.
+    - debian/patches/CVE-2021-28153-4.patch: fix CREATE_REPLACE_DESTINATION
+      with symlinks in gio/glocalfileoutputstream.c, gio/tests/file.c.
+    - debian/patches/CVE-2021-28153-5.patch: add a missing O_CLOEXEC flag
+      to replace() in gio/glocalfileoutputstream.c.
+    - CVE-2021-28153
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Fri, 12 Mar 2021 12:27:31 -0500
+
 glib2.0 (2.56.4-0ubuntu0.18.04.7) bionic-security; urgency=medium
 
   * SECURITY UPDATE: g_byte_array_new_take length truncation
